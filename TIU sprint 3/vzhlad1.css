@@ -2,9 +2,9 @@ body,html {
     background-size: cover;
     width: 100%;
     display: block;
-    background-color: rgb(145, 66, 66);
+    background-color: rgba(56, 56, 56, 1);
     margin: 0;
-
+    height: 100%;
 }
 
 
@@ -29,11 +29,12 @@ nav ul li {
     display: inline-block;
     padding: 17px 15px;
     position: relative;
+    
 }
 
 nav ul li a {
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: whitesmoke;
     text-decoration: none;
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
@@ -124,9 +125,10 @@ p {
 }
 
 .grid-container {
+    background-color: rgb(145, 66, 66);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 150px repeat(3, 0.01fr) 75px;
+    grid-template-rows: 150px 1fr 75px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -143,8 +145,11 @@ p {
     /*position: fixed;
     bottom: 0px;*/
     display: grid;
-    
-
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 77px;
 }
 
 .pata a {
@@ -173,16 +178,45 @@ p {
 
 }
 
-#menu {
-    background-color: rgb(172, 73, 73);
+#menu {                                                                               
+    background-color: rgb(145, 66, 66);                                                             
     /*grid-area: 2/2/5/1;*/
-    line-height: 45px;
+    line-height: 25px;
     margin: 0px;
-    width: 200px;
+    width: 120px;
     /*padding: 0px;
-    position: fixed;
+    position: left;
     left: -200px;*/
     display: none;
+    color: black;
+    
+}
+
+#menu li {
+    font-family: 'Russo One', sans-serif;
+    color:rgba(230, 230, 230, 0.9);
+    list-style: none;
+    padding: 15px 10px;
+    
+}
+
+#menu li a {
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+#menu li a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+#sideMenu {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
 }
 
 /*#menu.active {
@@ -207,27 +241,47 @@ p {
 
 .Menu {
     
-    text-align: center;
     font-size: 150px;
     font-family: 'Russo One', sans-serif;
     transform: rotate(270deg);
-    /*margin-left: -220px;
-    margin-top: 20px;*/
+    /*margin-top: -500px;*/
+    /*margin-left: -220px;*/
     
     
+    
+}
+
+#menu {
+    grid-column: 1/2;
+    grid-row: 2/6;
+}
+
+.Menu {
+    grid-column: 2/3;
+    grid-row: 2/6;
+
+}
+
+h4 {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 
 
 
+
         
-.menu ul a {
+.menu li a {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 25px;
-    list-style-type: ty;
     
 
 }
@@ -365,4 +419,3 @@ h1 {
     font-size: 50px;
 
 }
-
